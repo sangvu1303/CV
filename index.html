@@ -3,167 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CV - Vũ Quang Sáng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="resume">
-        <!-- Phần Trái -->
-        <div class="left">
-            <!-- Hình Ảnh -->
-            <div class="img_holder">
-                <img src="avata.jpg" alt="Avatar">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="avatar.jpg" alt="Profile Picture">
+                <h1>Vũ Quang Sáng</h1>
+                <p class="role">Web Developer</p>
             </div>
-
-            <!-- Thông tin liên hệ -->
-            <div class="contact_wrap pb">
-                <div class="title">Liên Hệ</div>
-                <ul class="contact">
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-calendar"></i></div>
-                        <div class="text">13/03/2000</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="text">092 133 2000</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-envelope"></i></div>
-                        <div class="text">vusang63@gmail.com</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fab fa-github"></i></div>
-                        <div class="text">
-                            <a href="https://sangvu1303.github.io/profile/" target="_blank">Github</a>
-                        </div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="text">Xuân Trường, Nam Định</div>
-                    </li>
+            <div class="contact">
+                <h2>Liên hệ</h2>
+                <ul>
+                    <li><i class="fas fa-calendar-alt"></i> 13/03/2000</li>
+                    <li><i class="fas fa-phone-alt"></i> 092 133 2000</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:vusang63@gmail.com">vusang63@gmail.com</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://sangvu1303.github.io/profile/" target="_blank">Github</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Xuân Trường, Nam Định</li>
                 </ul>
             </div>
-
-            <!-- Kỹ Năng -->
-            <div class="skills_wrap pb">
-                <div class="title">Kỹ Năng</div>
-                <ul class="skills">
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fab fa-html5"></i></div>
-                        <div class="text">HTML</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fab fa-css3-alt"></i></div>
-                        <div class="text">CSS</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fab fa-js"></i></div>
-                        <div class="text">JavaScript</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fab fa-react"></i></div>
-                        <div class="text">React.js</div>
-                    </li>
+            <div class="skills">
+                <h2>Kỹ năng</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React.js</li>
                 </ul>
             </div>
-
-            <!-- Sở Thích -->
-            <div class="hobbies_wrap pb">
-                <div class="title">Sở Thích</div>
-                <ul class="hobbies">
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-book"></i></div>
-                        <div class="text">Đọc Sách</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-music"></i></div>
-                        <div class="text">Nghe Nhạc</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-gamepad"></i></div>
-                        <div class="text">Gaming</div>
-                    </li>
-                    <li class="li_wrap">
-                        <div class="icon"><i class="fas fa-code"></i></div>
-                        <div class="text">Coding</div>
-                    </li>
+            <div class="hobbies">
+                <h2>Sở thích</h2>
+                <ul>
+                    <li>Đọc sách</li>
+                    <li>Nghe nhạc</li>
+                    <li>Gaming</li>
+                    <li>Coding</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Phần Phải -->
-        <div class="right">
-            <!-- Header -->
-            <div class="header">
-                <div class="name">Vũ Quang Sáng</div>
-                <div class="role">Web Developer</div>
-                <div class="about">
-                    “Điều quan trọng nhất để tận hưởng cuộc sống của chúng ta là hãy luôn hạnh phúc.”
-                </div>
-            </div>
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Summary -->
+            <section class="about">
+                <h2>Mục tiêu công việc</h2>
+                <p>Tôi mong muốn không ngừng học hỏi và phát triển bản thân trong môi trường làm việc chuyên nghiệp. Đồng thời, tôi hướng đến việc nâng cao kỹ năng chuyên môn để đóng góp hiệu quả vào sự phát triển của công ty.</p>
+            </section>
 
-            <!-- Nội Dung Chính -->
-            <div class="right_inner">
-                <!-- Mục tiêu công việc -->
-                <div class="target">
-                    <div class="title">Mục Tiêu Công Việc</div>
-                    <div class="target_wrap">
-                        <p>- Học hỏi và phát triển bản thân.</p>
-                        <p>- Nâng cao chuyên môn và tìm kiếm cơ hội thăng tiến.</p>
-                    </div>
+            <!-- Experience -->
+            <section class="experience">
+                <h2>Kinh nghiệm làm việc</h2>
+                <div class="item">
+                    <h3>Nhân viên kho vận</h3>
+                    <p>Công ty Đông Bắc Á, Hà Nội</p>
+                    <span>2022 - 2023</span>
+                    <p>Quản lý kho vận, hỗ trợ vận chuyển và sắp xếp hàng hóa đảm bảo an toàn và chính xác.</p>
                 </div>
+                <div class="item">
+                    <h3>Nhân viên kỹ thuật</h3>
+                    <p>VNPT, Nam Định</p>
+                    <span>2023 - 2024</span>
+                    <p>Triển khai lắp đặt hệ thống internet, hỗ trợ kỹ thuật cho khách hàng.</p>
+                </div>
+            </section>
 
-                <!-- Kinh Nghiệm -->
-                <div class="exp">
-                    <div class="title">Kinh Nghiệm</div>
-                    <ul class="exp_wrap">
-                        <li class="li_wrap">
-                            <div class="date">2022 - 2023</div>
-                            <div class="info">
-                                <p class="info_title">Internship</p>
-                                <p class="info_com">Công ty Đông Bắc Á, Hà Nội</p>
-                                <p class="info_cont">Nhân viên kho vận.</p>
-                            </div>
-                        </li>
-                        <li class="li_wrap">
-                            <div class="date">2023 - 2024</div>
-                            <div class="info">
-                                <p class="info_title">Internship</p>
-                                <p class="info_com">VNPT, Nam Định</p>
-                                <p class="info_cont">Nhân viên kỹ thuật lắp đặt internet.</p>
-                            </div>
-                        </li>
-                    </ul>
+            <!-- Education -->
+            <section class="education">
+                <h2>Học vấn</h2>
+                <div class="item">
+                    <h3>Học viện Công nghệ Bưu chính Viễn thông</h3>
+                    <p>Ngành Điện - Điện tử</p>
+                    <span>2018 - 2023</span>
+                    <p>GPA: 2.5/4.0</p>
                 </div>
+            </section>
 
-                <!-- Học Vấn -->
-                <div class="education">
-                    <div class="title">Học Vấn</div>
-                    <ul class="education_wrap">
-                        <li class="li_wrap">
-                            <div class="date">2018 - 2023</div>
-                            <div class="info">
-                                <p class="info_title">Đại Học</p>
-                                <p class="info_com">PTIT, Hà Đông, Hà Nội</p>
-                                <p class="info_cont">
-                                    - Ngành Điện - Điện Tử <br>
-                                    - GPA: 2.5
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Bằng Cấp -->
-                <div class="target">
-                    <div class="title">Bằng Cấp</div>
-                    <div class="target_wrap">
-                        <p>- Cử nhân kỹ sư điện - điện tử.</p>
-                        <p>- Sơ cấp lý luận chính trị.</p>
-                    </div>
-                </div>
-            </div>
+            <!-- Certificates -->
+            <section class="certificates">
+                <h2>Bằng cấp</h2>
+                <ul>
+                    <li>Cử nhân Kỹ sư Điện - Điện tử</li>
+                    <li>Sơ cấp Lý luận Chính trị</li>
+                </ul>
+            </section>
         </div>
     </div>
 </body>
