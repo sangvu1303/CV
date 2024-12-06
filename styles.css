@@ -32,6 +32,15 @@ body {
     padding: 20px;
 }
 
+.sidebar .profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #17a2b8;
+}
+
 .sidebar h1 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -113,4 +122,45 @@ body {
     font-size: 16px;
     color: #495057;
     margin-bottom: 5px;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.skills .li_wrap {
+    width: 90px; /* Giảm kích thước của mỗi mục */
+    height: 90px; /* Giảm chiều cao */
+    margin-bottom: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-icon-color);
+    transition: all 0.3s ease;
+}
+
+.skills .li_wrap .icon {
+    font-size: 30px; /* Giảm kích thước icon */
+    color: var(--icon-color);
+}
+
+.skills .li_wrap .text {
+    margin-top: 8px;
+    color: var(--icon-color);
+    text-transform: uppercase;
+    font-size: 12px; /* Giảm kích thước chữ */
+}
+
+.skills .li_wrap:hover {
+    background: var(--icon-color);
+}
+
+.skills .li_wrap:hover .icon,
+.skills .li_wrap:hover .text {
+    color: var(--bg-icon-color);
 }
