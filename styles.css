@@ -1,198 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
-
-/* Biến toàn cục */
-:root {
-    --title-color: #00bfff;
-    --bg-color: #3a3b3c;
-    --icon-color: #9153c9;
-    --text-color: #fff;
-    --bg-light: #f3f3f3;
-    --font-family: 'Ubuntu', sans-serif;
-}
-
-/* Reset và thiết lập chung */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-family);
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: linear-gradient(to right, #3525af, #9153c9);
-    color: var(--text-color);
-    font-size: 16px;
+    background-color: #f4f4f9;
+    color: #333;
     line-height: 1.6;
-    padding: 10px;
 }
 
 .resume {
-    max-width: 900px;
-    margin: 20px auto;
-    background: var(--bg-light);
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
 
-.left {
-    background: var(--bg-color);
-    color: var(--text-color);
-    flex: 1 1 300px;
+.sidebar {
+    width: 30%;
+    background: #353535;
+    color: #fff;
     padding: 20px;
-}
-
-.right {
-    flex: 2 1 600px;
-    padding: 30px;
-}
-
-/* Phần hình ảnh */
-.img_holder {
     text-align: center;
+}
+
+.sidebar h1 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.sidebar .role {
+    font-weight: 300;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.img_holder img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid var(--icon-color);
-    transition: transform 0.3s ease;
-}
-
-.img_holder img:hover {
-    transform: scale(1.1);
-}
-
-/* Phần tiêu đề */
-.title {
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--title-color);
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 10px;
-}
-
-.title:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 20px;
-    background: var(--icon-color);
-    border-radius: 3px;
-}
-
-/* Phần danh sách */
-ul {
+.sidebar ul {
     list-style: none;
+    padding: 0;
 }
 
-.contact .li_wrap {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    gap: 10px;
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 16px;
 }
 
-.contact .icon {
-    width: 35px;
-    height: 35px;
-    background: var(--bg-light);
-    color: var(--icon-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+.sidebar ul li i {
+    margin-right: 10px;
+    color: #00bfff;
+}
+
+.sidebar a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    width: 70%;
+    padding: 40px;
+}
+
+.main h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #00bfff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.main .item {
+    margin-bottom: 20px;
+}
+
+.main .item h3 {
     font-size: 18px;
-    transition: background 0.3s ease, color 0.3s ease;
+    margin-bottom: 5px;
+    color: #00bfff;
 }
 
-.contact .icon:hover {
-    background: var(--icon-color);
-    color: var(--bg-light);
-}
-
-.contact .text {
-    word-wrap: break-word;
+.main .item span {
     font-size: 14px;
+    color: #666;
 }
 
-/* Phần kỹ năng và sở thích */
-.skills ul, .hobbies ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.skills .li_wrap, .hobbies .li_wrap {
-    background: var(--bg-light);
-    color: var(--icon-color);
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    flex-direction: column;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
-}
-
-.skills .li_wrap:hover, .hobbies .li_wrap:hover {
-    transform: translateY(-5px);
-    background: var(--icon-color);
-    color: var(--bg-light);
-}
-
-/* Phần chính (right) */
-.header {
-    background: var(--bg-color);
-    color: var(--text-color);
-    padding: 20px;
-    text-align: center;
-}
-
-.header .name {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.header .role {
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-
-.header .about {
-    font-size: 14px;
-    font-style: italic;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .resume {
-        flex-direction: column;
-    }
-
-    .left, .right {
-        width: 100%;
-        flex: none;
-    }
-
-    .title {
-        font-size: 18px;
-    }
+.main ul {
+    list-style: none;
+    padding-left: 20px;
 }
