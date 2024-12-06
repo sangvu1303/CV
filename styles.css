@@ -1,240 +1,198 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
-*{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	box-sizing: border-box;
-	font-family: 'Ubuntu', sans-serif;
-}
+/* Biến toàn cục */
 :root {
-	--title-color : #00bfff;
-	--bg-color : #3a3b3c;
-	--icon-color :#9153c9;
-	--bg-icon-color : #fff ;
-}
-body{
-	background: linear-gradient(to right, #3525af, #9153c9);
-}
-
-.resume{
-	width: 850px;
-	background: var(--bg-icon-color);
-	margin: 25px auto;
-	display: flex;
+    --title-color: #00bfff;
+    --bg-color: #3a3b3c;
+    --icon-color: #9153c9;
+    --text-color: #fff;
+    --bg-light: #f3f3f3;
+    --font-family: 'Ubuntu', sans-serif;
 }
 
-.left{
-	background: var(--bg-color);
-	width: 330px;
-	padding: 0 20px;
+/* Reset và thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
 }
 
-.right{
-	width: calc(100% - 250px);
+body {
+    background: linear-gradient(to right, #3525af, #9153c9);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px;
 }
 
-.left .img_holder{
-	text-align: center;
-	padding: 20px 0;
+.resume {
+    max-width: 900px;
+    margin: 20px auto;
+    background: var(--bg-light);
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.left .img_holder img{
-	width: 200px;
-	border-radius: 30px;
+.left {
+    background: var(--bg-color);
+    color: var(--text-color);
+    flex: 1 1 300px;
+    padding: 20px;
 }
 
-.pb{
-	padding-bottom: 20px;
+.right {
+    flex: 2 1 600px;
+    padding: 30px;
 }
 
-.title{
-	font-size: 24px;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	padding-bottom: 10px;
-	color: var(--title-color);
-	position: relative;
-	text-align: right;
-	margin-bottom: 15px;
+/* Phần hình ảnh */
+.img_holder {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.title:before{
-	content: "";
-	position: absolute;
-	top: 35px;
-	right: 0;
-	width: 50px;
-	height: 3px;
-	background: #3525af;
+.img_holder img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--icon-color);
+    transition: transform 0.3s ease;
 }
 
-.left .icon{
-	font-size: 25px;
-	color: var(--icon-color);
+.img_holder img:hover {
+    transform: scale(1.1);
 }
 
-.left .text{
-	color: var(--icon-color);
-	text-transform: uppercase;
-	font-size: 16px;
+/* Phần tiêu đề */
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
 }
 
-.contact .li_wrap{
-	display: flex;
-	align-items: center;
-	width: 100%;
-	margin-bottom: 15px;
+.title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 20px;
+    background: var(--icon-color);
+    border-radius: 3px;
 }
 
-.contact .li_wrap .icon{
-	width: 35px;
-	height: 35px;
-	background: var(--bg-icon-color);
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 12px;
+/* Phần danh sách */
+ul {
+    list-style: none;
 }
 
-.contact .li_wrap .text{
-	width: calc(100% - 50px);
-	word-break: break-word;
-	color: var(--bg-icon-color);
-	text-transform: none;
+.contact .li_wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
 }
 
-.skills ul,
-.hobbies ul{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-.skills .li_wrap,
-.hobbies .li_wrap{
-	width: 90px;
-	height: 90px;
-	margin-bottom: 15px;
-	border-radius: 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.skills .li_wrap{
-	background: var(--bg-icon-color);
-}
-
-.skills .li_wrap .text,
-.hobbies .li_wrap .text{
-	margin-top: 5px;
-}
-
-.hobbies .li_wrap{
-	border: 2px solid var(--bg-icon-color);
-}
-
-.hobbies .li_wrap .icon,
-.hobbies .li_wrap .text{
-	color: var(--bg-icon-color);
-}
-
-.hobbies .li_wrap:hover{
-	background: var(--bg-icon-color);
-}
-
-.hobbies .li_wrap:hover .icon,
-.hobbies .li_wrap:hover .text{
-	color: var(--icon-color);
-}
-
-.header{
-	background: var(--bg-color);
-	padding: 15px 30px;
-	color: var(--bg-icon-color);
-	height: 240px;
-}
-
-.header .name{
-	font-size: 52px;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: var(--title-color);
-}
-
-.header .role{
-	font-weight: 300;
-	font-size: 20px;
-}
-
-.header .about{
-	margin-top: 20px;
-	line-height: 26px;
-}
-
-.right_inner{
-	padding: 30px;
-	color: var(--bg-color);
-}
-
-.right_inner .education{
-	margin-top: 30px;
-}
-
-.right_inner .li_wrap{
-	display: flex;
-	margin-bottom: 15px;
-}
-
-.right_inner .li_wrap .date {
-    width: 125px;
+.contact .icon {
+    width: 35px;
+    height: 35px;
+    background: var(--bg-light);
     color: var(--icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.right_inner .li_wrap .info{
-	width: calc(100%  - 125px);
-	padding-left: 25px;
-	position: relative;
+.contact .icon:hover {
+    background: var(--icon-color);
+    color: var(--bg-light);
 }
 
-.right_inner .li_wrap .info_title{
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 2px;
-	color: var(--icon-color);
+.contact .text {
+    word-wrap: break-word;
+    font-size: 14px;
 }
 
-.right_inner .li_wrap .info_com{
-	font-weight: 300;
-	font-size: 14px;
-	margin-top: 3px;
+/* Phần kỹ năng và sở thích */
+.skills ul, .hobbies ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
-.right_inner .li_wrap .info_cont{
-	margin-top: 15px;
+.skills .li_wrap, .hobbies .li_wrap {
+    background: var(--bg-light);
+    color: var(--icon-color);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
-.right_inner .li_wrap .info:before{
-	content: "";
-	position: absolute;
-	top: 3px;
-	left: 0;
-	width: 10px;
-	height: 10px;
-	background: var(--icon-color);
-	border-radius: 50%;
+.skills .li_wrap:hover, .hobbies .li_wrap:hover {
+    transform: translateY(-5px);
+    background: var(--icon-color);
+    color: var(--bg-light);
 }
 
-.right_inner .li_wrap .info:after{
-	content: "";
-	position: absolute;
-	top: 10px;
-	left: 4px;
-	width: 2px;
-	height: 90%;
-	background: var(--icon-color);
+/* Phần chính (right) */
+.header {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.header .name {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.header .role {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.header .about {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .resume {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        flex: none;
+    }
+
+    .title {
+        font-size: 18px;
+    }
 }
