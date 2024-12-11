@@ -164,3 +164,111 @@ body {
 .skills .li_wrap:hover .text {
     color: var(--bg-icon-color);
 }
+/* Responsive Styles */
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .resume {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .sidebar .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main h2 {
+        font-size: 18px;
+    }
+
+    .main .item h3 {
+        font-size: 16px;
+    }
+
+    .main .item span,
+    .main .item p {
+        font-size: 14px;
+    }
+
+    .skills ul {
+        justify-content: center;
+    }
+
+    .skills .li_wrap {
+        width: 70px; /* Giảm kích thước */
+        height: 70px;
+    }
+
+    .skills .li_wrap .icon {
+        font-size: 24px; /* Giảm kích thước icon */
+    }
+
+    .skills .li_wrap .text {
+        font-size: 10px; /* Giảm kích thước chữ */
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .sidebar .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sidebar h1 {
+        font-size: 20px;
+    }
+
+    .sidebar .role {
+        font-size: 16px;
+    }
+
+    .sidebar ul li {
+        font-size: 14px;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .main h2 {
+        font-size: 16px;
+    }
+
+    .main .item h3 {
+        font-size: 14px;
+    }
+
+    .main .item span,
+    .main .item p {
+        font-size: 12px;
+    }
+
+    .skills .li_wrap {
+        width: 60px; /* Thu nhỏ thêm nữa */
+        height: 60px;
+    }
+
+    .skills .li_wrap .icon {
+        font-size: 20px;
+    }
+
+    .skills .li_wrap .text {
+        font-size: 8px;
+    }
+}
